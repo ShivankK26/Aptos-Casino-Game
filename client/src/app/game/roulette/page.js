@@ -16,6 +16,8 @@ import { muiStyles } from "./styles";
 import Navbar from "@/components/Navbar";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+import { fromAptos } from "@/services/utils";
+import { spinWheelEntryFunctionPayload } from "@/services/rouletteModule.js";
 const TooltipWide = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))({
@@ -607,28 +609,53 @@ export default function GameRoulette() {
   const aptosClient = new Aptos(config);
   const CONTRACT_ADDRESS =
     "0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4";
-  const { account, signAndSubmitTransaction } = useWallet();
+  const { account, submitTransaction } = useWallet();
   const spinWheel = async () => {
-    const bet_amount_inputs = [12,12,12];
+    const bet_amount_inputs = [12, 12, 12];
     const predicted_outcomes = [
       [1, 2, 3],
       [13, 14, 15],
       [25, 26, 27],
     ];
-    const transaction = {
-      data: {
-        function: `${CONTRACT_ADDRESS}::roulette::spin_wheel`,
-        functionArguments: [
-          JSON.stringify(bet_amount_inputs),
-          JSON.stringify(predicted_outcomes),
-        ],
-      },
-    };
+    const currentBets = useMemo(
+      () =>
+        Object.keys(predicted_outcomes)
+          .map((betType) => {
+            let betTypeInt = parseInt(betType);
+            return predicted_outcomes[betTypeInt].map(
+              (predictedOutcome, index) => {
+                return {
+                  predictedOutcome,
+                  name: betNames[betTypeInt][index],
+                  amount: betAmounts[betTypeInt][index],
+                };
+              }
+            );
+          })
+          .flat()
+          .filter((bet) => bet.amount > 0),
+      [bet_amount_inputs]
+    );
+
+    console.log(currentBets, "Current Bets");
     try {
-      const response = await signAndSubmitTransaction(transaction);
-      // wait for transaction
-      // await aptosClient.waitForTransaction({transactionHash:response.hash});
-      console.log(response, "Response from spin_wheel function");
+    //   const res = await submitTransaction(
+    //     {
+    //       data: spinWheelEntryFunctionPayload(
+    //         currentBets.map((bet) => fromAptos(bet.amount)),
+    //         currentBets.map((bet) => bet.predictedOutcome)
+    //       ),
+    //       options: {
+    //         maxGasAmount: 1000000,
+    //       },
+    //     },
+    //     {
+    //       title: "Spin Wheel Successful",
+    //       description: "Your spin has been submitted",
+    //     }
+    //   );
+
+    //   console.log(res, "Response from spinWheel function");
     } catch (error) {
       console.error(error);
     }
@@ -991,7 +1018,9 @@ export default function GameRoulette() {
               <Button onClick={getPayout} className="mt-4">
                 Get Payout
               </Button>
-              <Button onClick={spinWheel} className="mt-10">Placed Your Bet</Button>
+              <Button onClick={spinWheel} className="mt-10">
+                Placed Your Bet
+              </Button>
             </Box>
             <Box sx={{ ml: 3, mt: 1 }}>
               {rollResult >= 0 ? (
