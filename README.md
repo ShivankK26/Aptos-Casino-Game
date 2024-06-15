@@ -10,11 +10,21 @@ APT-Casino is an innovative decentralized platform that provides a transparent, 
 2. **Seamless Cross-Chain Integration**: Effortless asset management and transfers between Aptos and other supported networks using Petra and Okto.
 3. **User-Friendly Wallet Integration**: Integrated Petra and Okto wallets provide a secure and user-friendly interface for managing funds, placing bets, and interacting with casino games.
 
-## Techstack
+## Technical Architecture
 
-![captures_chrome-capture-2024-5-16](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/b2c1d284-c72b-442e-b80a-95178e00ec6d)
+![captures_chrome-capture-2024-5-16 (2)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/6f951ad3-510a-4bf6-9ace-f5d937467351)
 
 Building APT-Casino involved the integration of multiple technologies to ensure a robust, transparent, and user-friendly platform. We started by utilizing Aptos capabilities to implement on-chain randomness for fair gameplay. The core gaming logic, specifically for the roulette game, was developed and deployed on the Aptos network, leveraging its fast transaction speeds and secure infrastructure. For user-friendly and secure wallet integration, we incorporated Petra and Okto's embedded wallet technologies, providing a seamless experience for managing funds and interacting with the platform. We also implemented a lending service that allows users to deposit tokens from any supported chain as collateral to borrow assets. The cross-chain compatibility facilitated seamless asset transfers and communication across different blockchain networks.
+
+## TechStack
+
+- Next.js
+- Javascript
+- Tailwind CSS
+- Move
+- Petra Wallet SDK
+- Okto Wallet SDK
+- Aptos randomness module: aptos_framework::randomness
 
 ## Challenges and Solution
 - **Implementing On-Chain Randomness**
@@ -31,6 +41,11 @@ Ensuring the security of our platform was a top priority, but it also posed sign
 
 - **User Onboarding**
 Simplifying the onboarding process for new users was another challenge. Many users are not familiar with blockchain technology and can find it intimidating. We focused on creating a user-friendly interface and streamlined the onboarding process with Aptos Pedra and Okto easy-to-use wallet solution. This involved iterative design and testing to ensure a smoother user experience.
+
+## Bounty Tracks Applied for
+1. **Ace of Spades Track**
+2. **Bridge Builder Track**
+3. **Okto Track**
 
 ## Deployed Contracts
 
