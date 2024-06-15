@@ -7,7 +7,7 @@ import AiModal from "@/components/AiModal";
 import { PetraWallet } from "petra-plugin-wallet-adapter";
 import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const metadata = {
@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
         <body>
           <AiModal />
           {children}
+          <Toaster position="top-right"  />
         </body>
       </AptosWalletAdapterProvider>
     </html>
