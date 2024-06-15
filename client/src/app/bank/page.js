@@ -1,10 +1,57 @@
+"use client";
 import GradientBorderButton from "@/components/GradientBorderButton";
 import Navbar from "@/components/Navbar";
 import HeaderText from "@/components/HeaderText";
 import Container from "@/components/Container";
 import Image from "next/image";
 import GradientBgButton from "@/components/GradientBgButton";
+import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
+import { useWallet } from "@aptos-labs/wallet-adapter-react";
+import { toast } from "react-hot-toast";
 export default function Page() {
+  const config = new AptosConfig({ network: Network.DEVNET });
+  const aptosClient = new Aptos(config);
+  const CONTRACT_ADDRESS =
+    "0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4";
+
+  const { account, signAndSubmitTransaction } = useWallet();
+  const getMetadata = async () => {
+    try {
+      const payload = {
+        function: `${CONTRACT_ADDRESS}::fa_coin::get_metadata`,
+        functionArguments: [],
+      };
+      const response = await aptosClient.view({ payload });
+      console.log(response, "Response from get_payout function");
+    } catch (error) {
+      console.error("Request failed:", error);
+      throw error;
+    }
+  };
+  const lend = async () => {
+    let id = toast.loading("Lending your amount...");
+    if (!account) return [];
+
+    const transaction = {
+      data: {
+        function: `${CONTRACT_ADDRESS}::fa_coin::mint`,
+        functionArguments: [
+          "0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4",
+          1000,
+        ],
+      },
+    };
+    try {
+      // sign and submit transaction to chain
+      const response = await signAndSubmitTransaction(transaction);
+      // wait for transaction
+      await aptosClient.waitForTransaction({ transactionHash: response.hash });
+      toast.success("Amount Lend Successfully ", { id });
+    } catch (error) {
+      console.log(error);
+      toast.error("Error in lending", { id });
+    }
+  };
   return (
     <>
       <Navbar />
@@ -25,7 +72,7 @@ export default function Page() {
             <span className="text-xl text-sharp-purple">APY 0.03%</span>
           </div>
           <div className=" w-1/12 flex items-end justify-center">
-            <GradientBorderButton classes="w-full h-2/3">
+            <GradientBorderButton onClick={getMetadata} classes="w-full h-2/3">
               Lend
             </GradientBorderButton>
           </div>
@@ -38,10 +85,9 @@ export default function Page() {
                 <div className="flex  flex-col gap-3">
                   <h5 className="text-xl font-sans">CURRENT</h5>
                   <span className="flex items-center mb-5 gap-1">
-                    
                     <p className="font-medium text-3xl">0</p>
                     <p className="text-sm font-sans opacity-50 flex self-end">
-                    Aptos Testnet
+                      Aptos Testnet
                     </p>
                   </span>
                   <div>
@@ -67,7 +113,6 @@ export default function Page() {
                 <div className="flex  flex-col gap-3">
                   <h5 className="text-xl font-sans">CURRENT</h5>
                   <span className="flex items-center mb-5 gap-1">
-                    
                     <p className="font-medium text-3xl">0</p>
                     <p className="text-sm font-sans opacity-50 flex self-end">
                       (Fuji Testnet)
@@ -106,10 +151,7 @@ export default function Page() {
               <tbody className="bg-dark-pink">
                 <tr className="col-span-full h-0.5 w-full"></tr>
                 <tr className="">
-                  <td className="flex py-4 gap-3 pl-10">
-                    
-                    Aptos Testnet
-                  </td>
+                  <td className="flex py-4 gap-3 pl-10">Aptos Testnet</td>
                   <td className="px-5">$0.93</td>
                   <td>0.22</td>
                   <td className="px-5">0.94%</td>
@@ -119,10 +161,7 @@ export default function Page() {
                   </td>
                 </tr>
                 <tr className="py-4">
-                  <td className="flex py-4 gap-3 pl-10">
-                    
-                     Aptos Testnet
-                  </td>
+                  <td className="flex py-4 gap-3 pl-10">Aptos Testnet</td>
                   <td className="px-5">$0.93</td>
                   <td>0.22</td>
                   <td className="px-5">0.94%</td>
@@ -132,10 +171,7 @@ export default function Page() {
                   </td>
                 </tr>
                 <tr className="py-4">
-                  <td className="flex py-4 gap-3 pl-10">
-                    
-                  Aptos Testnet
-                  </td>
+                  <td className="flex py-4 gap-3 pl-10">Aptos Testnet</td>
                   <td className="px-5">$0.93</td>
                   <td>0.22</td>
                   <td className="px-5">0.94%</td>
@@ -148,7 +184,6 @@ export default function Page() {
             </table>
           </div>
         </Container>
-
       </div>
     </>
   );
