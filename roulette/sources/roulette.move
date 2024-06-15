@@ -130,7 +130,7 @@ module aptcasino::roulette {
             math64::mul_div(bet_amount, (NUM_OUTCOMES as u64), vector::length(&predicted_outcome)) 
                 - house::get_fee_amount<RouletteGame>(bet_amount)
         } else {
-            0
+            0;
         }
     }
 
