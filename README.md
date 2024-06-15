@@ -12,6 +12,8 @@ APT-Casino is an innovative decentralized platform that provides a transparent, 
 
 ## Techstack
 
+![captures_chrome-capture-2024-5-16](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/b2c1d284-c72b-442e-b80a-95178e00ec6d)
+
 Building APT-Casino involved the integration of multiple technologies to ensure a robust, transparent, and user-friendly platform. We started by utilizing Aptos capabilities to implement on-chain randomness for fair gameplay. The core gaming logic, specifically for the roulette game, was developed and deployed on the Aptos network, leveraging its fast transaction speeds and secure infrastructure. For user-friendly and secure wallet integration, we incorporated Petra and Okto's embedded wallet technologies, providing a seamless experience for managing funds and interacting with the platform. We also implemented a lending service that allows users to deposit tokens from any supported chain as collateral to borrow assets. The cross-chain compatibility facilitated seamless asset transfers and communication across different blockchain networks.
 
 ## Challenges and Solution
@@ -33,4 +35,6 @@ Simplifying the onboarding process for new users was another challenge. Many use
 ## Deployed Contracts
 
 ### Aptos Network
+![captures_chrome-capture-2024-5-16 (1)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/fb5d3382-6122-4e64-a251-78e89265fb52)
+
 - **Roulette Contract**: https://aptoscan.com/transaction/23795743?network=devnet
