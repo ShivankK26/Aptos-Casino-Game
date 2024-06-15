@@ -38,15 +38,10 @@ export default function Page() {
                 <div className="flex  flex-col gap-3">
                   <h5 className="text-xl font-sans">CURRENT</h5>
                   <span className="flex items-center mb-5 gap-1">
-                    <Image
-                      src="/images/Polygon.png"
-                      width={35}
-                      height={35}
-                      alt="polygon"
-                    />
+                    
                     <p className="font-medium text-3xl">0</p>
                     <p className="text-sm font-sans opacity-50 flex self-end">
-                      (Amoy Testnet)
+                    Aptos Testnet
                     </p>
                   </span>
                   <div>
@@ -72,12 +67,7 @@ export default function Page() {
                 <div className="flex  flex-col gap-3">
                   <h5 className="text-xl font-sans">CURRENT</h5>
                   <span className="flex items-center mb-5 gap-1">
-                    <Image
-                      src="/images/Avax.png"
-                      width={35}
-                      height={35}
-                      alt="polygon"
-                    />
+                    
                     <p className="font-medium text-3xl">0</p>
                     <p className="text-sm font-sans opacity-50 flex self-end">
                       (Fuji Testnet)
@@ -117,13 +107,8 @@ export default function Page() {
                 <tr className="col-span-full h-0.5 w-full"></tr>
                 <tr className="">
                   <td className="flex py-4 gap-3 pl-10">
-                    <Image
-                      src="/images/Polygon.png"
-                      width={24}
-                      height={24}
-                      alt="polygon"
-                    />
-                    MATIC (Amoy testnet)
+                    
+                    Aptos Testnet
                   </td>
                   <td className="px-5">$0.93</td>
                   <td>0.22</td>
@@ -135,13 +120,8 @@ export default function Page() {
                 </tr>
                 <tr className="py-4">
                   <td className="flex py-4 gap-3 pl-10">
-                    <Image
-                      src="/images/Polygon.png"
-                      width={24}
-                      height={24}
-                      alt="polygon"
-                    />
-                    MATIC (Amoy testnet)
+                    
+                     Aptos Testnet
                   </td>
                   <td className="px-5">$0.93</td>
                   <td>0.22</td>
@@ -153,13 +133,8 @@ export default function Page() {
                 </tr>
                 <tr className="py-4">
                   <td className="flex py-4 gap-3 pl-10">
-                    <Image
-                      src="/images/Polygon.png"
-                      width={24}
-                      height={24}
-                      alt="polygon"
-                    />
-                    MATIC (Amoy testnet)
+                    
+                  Aptos Testnet
                   </td>
                   <td className="px-5">$0.93</td>
                   <td>0.22</td>
