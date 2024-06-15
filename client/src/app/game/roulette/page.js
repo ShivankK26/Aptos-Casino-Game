@@ -617,45 +617,63 @@ export default function GameRoulette() {
       [13, 14, 15],
       [25, 26, 27],
     ];
-    const currentBets = useMemo(
-      () =>
-        Object.keys(predicted_outcomes)
-          .map((betType) => {
-            let betTypeInt = parseInt(betType);
-            return predicted_outcomes[betTypeInt].map(
-              (predictedOutcome, index) => {
-                return {
-                  predictedOutcome,
-                  name: betNames[betTypeInt][index],
-                  amount: betAmounts[betTypeInt][index],
-                };
-              }
-            );
-          })
-          .flat()
-          .filter((bet) => bet.amount > 0),
-      [bet_amount_inputs]
-    );
-
+    // const currentBets = useMemo(
+    //   () =>
+    //     Object.keys(predicted_outcomes)
+    //       .map((betType) => {
+    //         let betTypeInt = parseInt(betType);
+    //         return predicted_outcomes[betTypeInt].map(
+    //           (predictedOutcome, index) => {
+    //             return {
+    //               predictedOutcome,
+    //               name: betNames[betTypeInt][index],
+    //               amount: betAmounts[betTypeInt][index],
+    //             };
+    //           }
+    //         );
+    //       })
+    //       .flat()
+    //       .filter((bet) => bet.amount > 0),
+    //   [bet_amount_inputs]
+    // );
+    const currentBets = [
+      {
+        predictedOutcome: 1,
+        name: "First Bet 1",
+        amount: 12,
+      },
+      {
+        predictedOutcome: 14,
+        name: "Second Bet 2",
+        amount: 12,
+      },
+      {
+        predictedOutcome: 27,
+        name: "Third Bet 3",
+        amount: 12,
+      },
+    ];
     console.log(currentBets, "Current Bets");
     try {
-    //   const res = await submitTransaction(
-    //     {
-    //       data: spinWheelEntryFunctionPayload(
-    //         currentBets.map((bet) => fromAptos(bet.amount)),
-    //         currentBets.map((bet) => bet.predictedOutcome)
-    //       ),
-    //       options: {
-    //         maxGasAmount: 1000000,
-    //       },
-    //     },
-    //     {
-    //       title: "Spin Wheel Successful",
-    //       description: "Your spin has been submitted",
-    //     }
-    //   );
+      const res = await submitTransaction(
+        {
+          data: spinWheelEntryFunctionPayload(
+            account.address,
+            currentBets.map((bet) => fromAptos(bet.amount)),
+            currentBets.map((bet) => bet.predictedOutcome)
+          ),
+          options: {
+            maxGasAmount: 1000000
+          },
+		  
+        },
+        {
+          title: "Spin Wheel Successful",
+          description: "Your spin has been submitted",
+        }
+      );
 
-    //   console.log(res, "Response from spinWheel function");
+      console.log(res, "Response from spinWheel function");
     } catch (error) {
       console.error(error);
     }
