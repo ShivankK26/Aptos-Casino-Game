@@ -8,6 +8,7 @@ import GradientBgButton from "@/components/GradientBgButton";
 import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { toast } from "react-hot-toast";
+import { getPortfolio,authenticate } from "@/services/okto";
 export default function Page() {
   const config = new AptosConfig({ network: Network.DEVNET });
   const aptosClient = new Aptos(config);
@@ -31,22 +32,9 @@ export default function Page() {
   const lend = async () => {
     let id = toast.loading("Lending your amount...");
     if (!account) return [];
-
-    const transaction = {
-      data: {
-        function: `${CONTRACT_ADDRESS}::fa_coin::mint`,
-        functionArguments: [
-          "0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4",
-          1000,
-        ],
-      },
-    };
     try {
-      // sign and submit transaction to chain
-      const response = await signAndSubmitTransaction(transaction);
-      // wait for transaction
-      await aptosClient.waitForTransaction({ transactionHash: response.hash });
-      toast.success("Amount Lend Successfully ", { id });
+   
+      const response = await authenticate();
     } catch (error) {
       console.log(error);
       toast.error("Error in lending", { id });
@@ -115,7 +103,7 @@ export default function Page() {
                   <span className="flex items-center mb-5 gap-1">
                     <p className="font-medium text-3xl">0</p>
                     <p className="text-sm font-sans opacity-50 flex self-end">
-                      (Fuji Testnet)
+                      (Sepolia Testnet)
                     </p>
                   </span>
                   <div>
