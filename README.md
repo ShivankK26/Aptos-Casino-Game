@@ -61,3 +61,4 @@ Simplifying the onboarding process for new users was another challenge. Many use
 ![IMAGE 2024-06-16 04:36:20](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/4047e5c0-6eaf-4320-8d08-722c9438fdf2)
 ![IMAGE 2024-06-16 04:36:14](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/14c9d9d5-14b4-4c1e-8e02-7b69878813d2)
 ![IMAGE 2024-06-16 04:36:25](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/d4e3b1dd-0627-469c-9956-38a9f3c95516)
+![captures_chrome-capture-2024-5-16 (3)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/02fa3ea9-d0bb-4ffe-b6d7-9ddba059629e)
