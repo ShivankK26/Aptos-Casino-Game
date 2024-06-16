@@ -603,6 +603,7 @@ export default function GameRoulette() {
     return val;
   }, [red, black, odd, even, over, under, dozens, columns, inside]);
 
+  const delay = (ms) => new Promise((res) => setTimeout(res, ms));
   const theme = createTheme(muiStyles["dark"]);
   const config = new AptosConfig({ network: Network.DEVNET });
   const aptosClient = new Aptos(config);
@@ -627,6 +628,13 @@ export default function GameRoulette() {
       // wait for transaction
       await aptosClient.waitForTransaction({ transactionHash: response.hash });
       toast.success("Bet Placed Successfully", { id });
+
+
+      let nextid = toast.loading("Spinning the Wheel...");
+      await delay(3000);
+      const tokensYouGot = 40;
+      toast.success(`You won ${tokensYouGot} tokens`, { nextid });
+
     } catch (error) {
       console.log(error);
 	  toast.error("Error Placing Bet", { id });
