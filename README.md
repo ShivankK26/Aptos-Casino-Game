@@ -48,7 +48,7 @@ Simplifying the onboarding process for new users was another challenge. Many use
 3. **Okto Track**
 
 ## Deployed Contracts
-1. **Roulette Contract**: https://aptoscan.com/transaction/23795743?network=devnet
+1. **Roulette Contract - aptos_framework::randomness::** https://aptoscan.com/transaction/23795743?network=devnet
 2. **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
 3. **Cross-Chain Contract (Aptos <-> EVM)**: 
 - Aptos: https://aptoscan.com/transaction/29840524?network=devnet
