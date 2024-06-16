@@ -50,7 +50,7 @@ Simplifying the onboarding process for new users was another challenge. Many use
 
 ## Deployed Contracts
 - **Roulette Contract**: https://aptoscan.com/transaction/23795743?network=devnet
-- **Roulette Reward Token Contract** : https://aptoscan.com/transaction/23795743?network=devnet
+- **Roulette Reward Token Contract** : https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
   
 ### Aptos Network
 ![captures_chrome-capture-2024-5-16 (1)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/fb5d3382-6122-4e64-a251-78e89265fb52)
@@ -61,6 +61,3 @@ Simplifying the onboarding process for new users was another challenge. Many use
 ![IMAGE 2024-06-16 04:36:20](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/4047e5c0-6eaf-4320-8d08-722c9438fdf2)
 ![IMAGE 2024-06-16 04:36:14](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/14c9d9d5-14b4-4c1e-8e02-7b69878813d2)
 ![IMAGE 2024-06-16 04:36:25](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/d4e3b1dd-0627-469c-9956-38a9f3c95516)
-![IMAGE 2024-06-16 04:36:11](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/0d2bd557-20d5-4d31-ab3f-16e8e056a6b3)
-
-
