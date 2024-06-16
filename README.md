@@ -48,13 +48,17 @@ Simplifying the onboarding process for new users was another challenge. Many use
 3. **Okto Track**
 
 ## Deployed Contracts
-- **Roulette Contract**: https://aptoscan.com/transaction/23795743?network=devnet
-- **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
-- **Cross-Chain Contract (Aptos <-> EVM)**: https://aptoscan.com/transaction/29840524?network=devnet
+1. **Roulette Contract**: https://aptoscan.com/transaction/23795743?network=devnet
+2. **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
+3. **Cross-Chain Contract (Aptos <-> EVM)**: 
+- Aptos: https://aptoscan.com/transaction/29840524?network=devnet
+- EVM: https://sepolia.etherscan.io/address/0x98C2Cd3F5eA88c2aF0A5f021BAaFC48753DdD379
 
 ![captures_chrome-capture-2024-5-16 (5)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/8cdf751d-50d4-4227-b497-2a017a0ffc89)
 
 ![captures_chrome-capture-2024-5-16 (4)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/0c34c1b6-2e8a-4d60-930e-58ea81a38057)
+
+![captures_chrome-capture-2024-5-16 (6)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/7df97e41-1e9e-40f2-98ad-2f54f5ce35e4)
 
 ---
 
