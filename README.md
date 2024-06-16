@@ -12,7 +12,7 @@ APT-Casino is an innovative decentralized platform that provides a transparent, 
 
 ## Technical Architecture
 
-![captures_chrome-capture-2024-5-16 (2)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/6f951ad3-510a-4bf6-9ace-f5d937467351)
+![captures_chrome-capture-2024-5-16 (7)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/25853323-f810-458d-a633-07ba98b2de09)
 
 Building APT-Casino involved the integration of multiple technologies to ensure a robust, transparent, and user-friendly platform. We started by utilizing Aptos capabilities to implement on-chain randomness for fair gameplay. The core gaming logic, specifically for the roulette game, was developed and deployed on the Aptos network, leveraging its fast transaction speeds and secure infrastructure. For user-friendly and secure wallet integration, we incorporated Petra and Okto's embedded wallet technologies, providing a seamless experience for managing funds and interacting with the platform. We also implemented a lending service that allows users to deposit tokens from any supported chain as collateral to borrow assets. The cross-chain compatibility facilitated seamless asset transfers and communication across different blockchain networks.
 
@@ -22,6 +22,7 @@ Building APT-Casino involved the integration of multiple technologies to ensure 
 - Javascript
 - Tailwind CSS
 - Move
+- Solidity
 - Petra Wallet SDK
 - Okto Wallet SDK
 - Aptos randomness module: aptos_framework::randomness
@@ -42,23 +43,25 @@ Ensuring the security of our platform was a top priority, but it also posed sign
 - **User Onboarding**
 Simplifying the onboarding process for new users was another challenge. Many users are not familiar with blockchain technology and can find it intimidating. We focused on creating a user-friendly interface and streamlined the onboarding process with Aptos Pedra and Okto easy-to-use wallet solution. This involved iterative design and testing to ensure a smoother user experience.
 
-## Bounty Tracks Applied for
-1. **Ace of Spades Track**
-2. **Bridge Builder Track**
-3. **Okto Track**
+## Bounty Tracks Applied for and Deployed Contracts Link:
+**1. Ace of Spades Track:**
+- **Roulette Contract - aptos_framework::randomness::** https://aptoscan.com/transaction/23795743?network=devnet
+- **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
 
-## Deployed Contracts
-1. **Roulette Contract - aptos_framework::randomness::** https://aptoscan.com/transaction/23795743?network=devnet
-2. **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
-3. **Cross-Chain Contract (Aptos <-> EVM)**: 
+![captures_chrome-capture-2024-5-16 (5)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/dbcba340-d9a9-46fc-a0d6-0b6f0ed8daad)
+
+**2. Bridge Builder Track:**
+**Cross-Chain Contract (Aptos <-> EVM)**: 
 - Aptos: https://aptoscan.com/transaction/29840524?network=devnet
 - EVM: https://sepolia.etherscan.io/address/0x98C2Cd3F5eA88c2aF0A5f021BAaFC48753DdD379
 
-![captures_chrome-capture-2024-5-16 (5)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/8cdf751d-50d4-4227-b497-2a017a0ffc89)
+![captures_chrome-capture-2024-5-16 (4)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/44eb13ad-7b31-4e24-bbc5-a9301a731f6d)
 
-![captures_chrome-capture-2024-5-16 (4)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/0c34c1b6-2e8a-4d60-930e-58ea81a38057)
+![captures_chrome-capture-2024-5-16 (6)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/e1342754-ab09-4984-96bc-7fa8b7a4d2c7)
 
-![captures_chrome-capture-2024-5-16 (6)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/7df97e41-1e9e-40f2-98ad-2f54f5ce35e4)
+**3. Okto Track:**
+
+![photo_6302910746954152863_y](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/4eb71a31-be92-4fa5-a64e-7270447eacec)
 
 ---
 
