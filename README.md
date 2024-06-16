@@ -1,4 +1,3 @@
-
 # APT-Casino [Place Your Best Move with Move]
 
 We decided to build APT-Casino after witnessing the frustrations and challenges faced by new users in the web3 space and online gambling ecosystems. Traditional online gambling platforms often suffer from issues such as lack of transparency, centralized control, and hidden restrictions. This experience highlighted the need for a transparent, fair, and user-centric gaming platform. Inspired by the potential of Aptos, Petra, and Okto, we set out to create APT-Casino - a platform that provides a safe, enjoyable, and transparent gaming experience.
@@ -50,10 +49,14 @@ Simplifying the onboarding process for new users was another challenge. Many use
 
 ## Deployed Contracts
 - **Roulette Contract**: https://aptoscan.com/transaction/23795743?network=devnet
-- **Roulette Reward Token Contract** : https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
-  
-### Aptos Network
-![captures_chrome-capture-2024-5-16 (1)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/fb5d3382-6122-4e64-a251-78e89265fb52)
+- **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
+- **Cross-Chain Contract (Aptos <-> EVM)**: https://aptoscan.com/transaction/29840524?network=devnet
+
+![captures_chrome-capture-2024-5-16 (5)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/8cdf751d-50d4-4227-b497-2a017a0ffc89)
+
+![captures_chrome-capture-2024-5-16 (4)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/0c34c1b6-2e8a-4d60-930e-58ea81a38057)
+
+---
 
 ### Platform UI 
 ![IMAGE 2024-06-16 04:36:24](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/7ad111b0-f24e-466f-96b7-ad1a03b4cab3)
