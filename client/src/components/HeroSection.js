@@ -12,7 +12,7 @@ export default function HeroSection() {
     >
       <div className="font-display capitalize flex text-white flex-col text-center items-center gap-4">
         <h1 className="text-5xl">
-          Placed your best move with <br /> <span className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-red-magic to-blue-magic">
+          Place your best move with <br /> <span className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-red-magic to-blue-magic">
             Move
           </span> {" "} <br />
         

@@ -64,12 +64,12 @@ export default function Page() {
         />
         <div className="w-full justify-end font-display flex py-5">
           <div className="flex items-center px-3 flex-col border-r">
-            <h5 className="text-sm">TOTAL LINKS</h5>
+            <h5 className="text-sm">TOTAL APT LIQUIDITY</h5>
             <span className="text-xl text-sharp-purple">203,746</span>
           </div>
           <div className="flex items-center px-3 flex-col">
-            <h5 className="text-sm">1 LINKS = $15.53</h5>
-            <span className="text-xl text-sharp-purple">APY 0.03%</span>
+            <h5 className="text-sm">1 APT = $7.9 USDT</h5>
+            <span className="text-xl text-sharp-purple">APY 2%</span>
           </div>
           <div className=" w-1/12 flex items-end justify-center">
             <GradientBorderButton onClick={getMetadata} classes="w-full h-2/3">
@@ -152,9 +152,9 @@ export default function Page() {
                 <tr className="col-span-full h-0.5 w-full"></tr>
                 <tr className="">
                   <td className="flex py-4 gap-3 pl-10">Aptos Testnet</td>
-                  <td className="px-5">$0.93</td>
-                  <td>0.22</td>
-                  <td className="px-5">0.94%</td>
+                  <td className="px-5">$7.9</td>
+                  <td>8.2 APT</td>
+                  <td className="px-5">1.94%</td>
                   <td className="flex items-center  justify-center gap-5">
                     <GradientBorderButton>Withdraw</GradientBorderButton>
                     <GradientBgButton>Deposit</GradientBgButton>
@@ -162,9 +162,9 @@ export default function Page() {
                 </tr>
                 <tr className="py-4">
                   <td className="flex py-4 gap-3 pl-10">Aptos Testnet</td>
-                  <td className="px-5">$0.93</td>
-                  <td>0.22</td>
-                  <td className="px-5">0.94%</td>
+                  <td className="px-5">$7.9</td>
+                  <td>8.2 APT</td>
+                  <td className="px-5">1.94%</td>
                   <td className="flex items-center justify-center gap-5">
                     <GradientBorderButton>Withdraw</GradientBorderButton>
                     <GradientBgButton>Deposit</GradientBgButton>
@@ -172,9 +172,9 @@ export default function Page() {
                 </tr>
                 <tr className="py-4">
                   <td className="flex py-4 gap-3 pl-10">Aptos Testnet</td>
-                  <td className="px-5">$0.93</td>
-                  <td>0.22</td>
-                  <td className="px-5">0.94%</td>
+                  <td className="px-5">$7.9</td>
+                  <td>8.2 APT</td>
+                  <td className="px-5">1.94%</td>
                   <td className="flex items-center py-4 justify-center gap-5">
                     <GradientBorderButton>Withdraw</GradientBorderButton>
                     <GradientBgButton>Deposit</GradientBgButton>

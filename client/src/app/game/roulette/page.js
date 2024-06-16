@@ -992,7 +992,7 @@ export default function GameRoulette() {
                 Get Payout
               </Button>
               <Button className="mt-10" onClick={spinWheel}>
-                Placed Your Bet
+                Place Your Bet
               </Button>
             </Box>
             <Box sx={{ ml: 3, mt: 1 }}>
