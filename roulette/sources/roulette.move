@@ -55,11 +55,6 @@ module aptcasino::roulette {
     }
 
     // game functions
-
-    /// Spins the wheel and pays out the player
-    /// * player: the signer of the player account
-    /// * bet_amount_inputs: the amount to bet on each predicted outcome
-    /// * predicted_outcomes: the numbers the player predicts for each corresponding bet
     #[randomness]
     entry fun spin_wheel(
         player: &signer,

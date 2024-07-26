@@ -1,12 +1,12 @@
 [package]
-name = "fungible-token"
+name = "token"
 version = "1.0.0"
 authors = []
-upgrade_policy = "compatible"
 
 [addresses]
-FACoin = "25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4"
+FACoin='0x0da2178c68352cf9035afbb8750eb9eb6905332a9d0f15bd36b140cba6eaf5eb'
 
+[dev-addresses]
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"

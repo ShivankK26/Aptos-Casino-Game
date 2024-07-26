@@ -7,7 +7,7 @@ import {
 const NUM_SLOTS = 36;
 const rouletteModule = "roulette";
 const aptosinoPackageAddress =
-  "0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4";
+  "0x0da2178c68352cf9035afbb8750eb9eb6905332a9d0f15bd36b140cba6eaf5eb";
 
 const entryFunctionPayload = (func, args, typeArgs) => ({
   function: func,
